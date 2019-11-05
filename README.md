@@ -7,8 +7,24 @@
 * Pia Nolte  
 
 ## Forschungsfrage: 
-_Welche Personengruppen nutzen E-Recruiting und welche Potentiale und Risiken liegen in diesem Bewerbungsverfahren?_ 
-# _Faktorenraum_:
+_Wie wird Online-Recruiting wahrgenommen und welche Personengruppen nutzen dieses Bewerbungsverfahren?_ 
+
+# Zu replizierendes Ergebnis: 
+_Wahrnehmung_: 
+* überwiegend positiv bei einer jungen, gut gebildeten Personengruppe
+* kritisch bei älteren Personengruppen 
+_Nutzung_: 
+* eher jüngere Generation 
+_eigener Akzent (zusätzlich, nicht im Fokus)_:
+* Ob es in gewissen Branchen überhaupt E-Recruiting gibt? Besteht dort überhaupt Interesse und Bedarf? 
+
+# _Neuere Version_:
+
+![Faktorenraum](Images/FaktorenraumE-Recruiting2.png)
+
+# _Ältere Version_:
 
 ![Faktorenraum](FaktorenraumE-Recruiting.png) 
+
+
 
