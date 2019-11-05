@@ -13,8 +13,10 @@ _Wie wird Online-Recruiting wahrgenommen und welche Personengruppen nutzen diese
 _Wahrnehmung_: 
 * überwiegend positiv bei einer jungen, gut gebildeten Personengruppe
 * kritisch bei älteren Personengruppen 
+
 _Nutzung_: 
 * eher jüngere Generation 
+
 _eigener Akzent (zusätzlich, nicht im Fokus)_:
 * Ob es in gewissen Branchen überhaupt E-Recruiting gibt? Besteht dort überhaupt Interesse und Bedarf? 
 
