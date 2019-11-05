@@ -8,7 +8,7 @@
 
 ## Forschungsfrage: 
 _Welche Personengruppen nutzen E-Recruiting und welche Potentiale und Risiken liegen in diesem Bewerbungsverfahren?_ 
-# _Frühere Version_:
+# _Faktorenraum_:
 
 ![Faktorenraum](FaktorenraumE-Recruiting.png) 
 
