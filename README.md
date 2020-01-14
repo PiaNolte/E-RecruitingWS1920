@@ -4,12 +4,11 @@
 * Anika Berghahn 
 * Christina Koerfers 
 * Pia Nolte  
-* (Ivana Markovic) 
 
 ## Forschungsfrage: 
 _Wie wird Online-Recruiting wahrgenommen und welche Personengruppen nutzen dieses Bewerbungsverfahren?_ 
 
-# Hypothesen:
+# Unterschiedshypothesen:
 
 1. Hypothese: Online-Recruiting wird positiv wahrgenommen.
 * Verfahren: einfacher t-Test 
@@ -43,6 +42,18 @@ _Wie wird Online-Recruiting wahrgenommen und welche Personengruppen nutzen diese
  *	mancova(datensatz, deps=c(“ORRPPE“, “ORRPZG“), factors = c(gender), covs=c(“age“))
 *	H0: Geschlecht und Alter wirken sich nicht auf die Wahrnehmung von Praktikabilität/Effizienz und die Zielgruppenerschließung bezüglich OR aus. 
 *	H1: Geschlecht und Alter wirken sich auf die Wahrnehmung von Praktikabilität/Effizienz und die Zielgruppenerschließung bezüglich OR aus. 
+
+# Zusammenhangshypothesen
+
+1. Hypothese: Das Alter hängt mit der Wahrnehmung von OR zusammen. (Korrelation)
+
+2. Hypothese: Je älter man ist, desto negativer ist die Wahrnehmung von OR. (LR)
+
+3. Hypothese: Negative Wahrnehmung von OR hängt zusammen mit schlechterer Bewertung von zeitlichen Faktoren. (Korrelation)
+
+4. Hypothese: Je höher der KUT, desto praktischer/effizienter wird OR wahrgenommen. (LR)
+
+5. Hypothese: Es gibt einen Zusammenhang zwischen KUT und allgemeiner Wahrnehmung. (Korrelation)
 
 # Zu replizierendes Ergebnis: 
 _Wahrnehmung_: 
