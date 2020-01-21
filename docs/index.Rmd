@@ -58,6 +58,7 @@ rmdtemplates::write_bib(pkgs)
 
 
 # Abstract {-}
+Forschungsfrage: xxx
 
 # First Section
 ## A Subsection Sample
