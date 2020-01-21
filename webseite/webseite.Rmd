@@ -1,6 +1,6 @@
 ---
-title: "My Open Data Website"
-author: "Anonymous, Anonymous"
+title: "Online-Recruiting (OR)"
+author: "Pia Nolte, Anika Berghahn, Christina Koerfers"
 date: "`r Sys.Date()`"
 bibliography: ["rpackages.bib", "bibliography.bib"]
 biblio-style: "apalike"
