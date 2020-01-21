@@ -58,7 +58,6 @@ rmdtemplates::write_bib(pkgs)
 
 
 # Abstract {-}
-Hier müssen wir dann unsere Sachen reinschreiben
 
 # First Section
 ## A Subsection Sample
