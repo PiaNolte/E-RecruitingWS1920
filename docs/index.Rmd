@@ -5,7 +5,13 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+library(usethis)
+use_git_config(user.name = "PiaNolte", user.email = "pia.nolte@rwth-aachen.de")
 ```
 
-# Test Webseite!
+# Test Webseite! :)
+
+
+
 
