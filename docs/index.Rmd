@@ -1,5 +1,5 @@
 ---
-title: "Online-Recruiting (OR)"
+title: "Online-Recruiting (OR) :)"
 author: "Pia Nolte, Anika Berghahn, Christina Koerfers"
 date: "`r Sys.Date()`"
 bibliography: ["rpackages.bib", "bibliography.bib"]
