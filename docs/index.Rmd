@@ -58,115 +58,86 @@ rmdtemplates::write_bib(pkgs)
 
 
 # Abstract {-}
-Forschungsfrage: xxx
+Online-Recruiting
+Forschungsfrage: Wie wird Online-Recruiting (OR) von unterschiedlichen Altersgruppen wahrgenommen und welche Faktoren beeinflussen diese Wahrnehmung?
 
-# First Section
-## A Subsection Sample
-Please note that the first paragraph of a section or subsection is
-not indented. The first paragraph that follows a table, figure,
-equation etc. does not need an indent, either.
+# Hintergrund der Forschungsfrage
 
-Subsequent paragraphs, however, are indented.
+Referenzpaper: _Catarina Brandaoa, Rita Silvaa, Joana Vieira dos Santos: Online recruiting in Portugal. Theories and candidate profiles. In: Journal of Business Research 94 (2019), p. 273-279._
 
-### Sample Heading (Third Level) 
-Only two levels of
-headings should be numbered. Lower level headings remain unnumbered;
-they are formatted as run-in headings.
+* Online-Recruiting (OR) = Digitaler Bewerbungsprozess, beispielsweise über Online-Portale oder die Website des jeweiligen Arbeitgebers 
 
-#### Sample Heading (Fourth Level)
-The contribution should contain no more than four levels of
-headings. 
+## Zu replizierendes Ergebnis:
+
+Fokus auf Wahrnehmung:
+
+* überwiegend positiv bei einer jungen, gut gebildeten Personengruppe
+* kritisch bei älteren Personengruppen
+* wird durch einzelne Faktoren beeinflusst
 
 
-# References
-You can cite any paper in parenthesis as following [@valdez2017priming] or inline saying that @valdez2017priming found something.
-Multiple citations are possible as well [@valdez2017priming;@valdez2019users].
+## Kernaussagen des Referenzpapers:
 
-You can refer to other sections by kebab-casing to section \@ref(a-subsection-sample). You can easily cite an r-package directly in the text by using the `cite_pkg` function from the package `r rmdtemplates::cite_pkg("rmdtemplates")`. 
-
-
-# Environments
-
-The environments 'definition', 'lemma', 'proposition', 'corollary', 'remark', and 'example' are defined in the available as well.
+* OR wird von Arbeitnehmern gut angenommen (48% der Befragten bewerten OR positiv)
+* Aber: Der Prozess ist unpersönlich
+* Faktoren, die die Wahrnehmung beeinflussen: Praktikablität, Effizienz, Sicherheit, Interaktion, Zielgruppenerschließung etc.
+* Nutzerprofil: weiblich, Millennial, Bachelorabschluss
 
 
-## Theorems
-```{r theorem, echo=FALSE, results='asis'}
-theorem <- generate_environment("Theorem")
-theorem("This is a sample theorem. The run-in heading is set in bold, 
-        while the following text appears in italics. Definitions, lemmas, propositions, 
-        and corollaries are styled the same way.")
-```
+# Unterschiedshypothesen 
+1. Hypothese: Online-Recruiting wird positiv wahrgenommen.
+* Verfahren: einfacher t-Test 
+* t.test(datensatz$ORAW, mu=3,5)
+* H0: Die Wahrnehmung von Online-Recruiting liegt bei mu=3,5 (OR wird neutral gesehen)
+*	H1: Online-Recruiting wird nicht neutral wahrgenommen.
 
 
-```{r theorem2, echo=FALSE, results='asis'}
-# note that environments require echo=FALSE and results='asis'
-
-theorem("This is a second. Numbering works automatically.")
-```
-
-
-
-## Equations
-\begin{equation}
-x + y = z
-\end{equation}
+2. Hypothese: Studierende nutzen Online-Recruiting eher als Rentner.
+* Verfahren: unverbundener t-Test 
+* t.test(datensatz$ORE ~ datensatz-activity) 
+* H0: (Nicht-)Nutzung von Online-Recruiting unterscheidet sich nicht zwischen Studierenden und Rentnern.
+* H1: Es gibt einen Unterschied in der Nutzung von Online-Recruiting zwischen Studierenden und Rentnern. 
 
 
-
-## Tables
-You can get the non breaking space in RStudio by pressing ALT+SPACE.
-You can refer to tables by using Table \@ref(tab:table1).
-
-```{r table1, echo=FALSE}
-# Note that the label has to be added manually in the caption here.
-iris %>% head() %>% knitr::kable(caption = "Test")
-```
+3. Hypothese: Wer schon einmal OR genutzt hat, legt Wert auf die Interaktion zwischen Bewerber und Unternehmen.
+*	Verfahren: one-way ANOVA
+*	anova(datensatz, dep=“ORRPI“, factors= c(“ore1“))
+*	H0: Die persönlichen Erfahrungen mit OR beeinflussen die Bewertung der Interaktion im Bewerbungsprozess nicht.
+*	H1: Die persönlichen Erfahrungen mit OR beeinflussen die Bewertung der Interaktion im Bewerbungsprozess.
 
 
-```{r table2}
-tribble(
-  ~`Column Head A`, ~`Column Head B`,
-  "a",  1:3,
-  "b",  4:6
-) %>% knitr::kable(caption = "A tribble example", booktabs=T, longtable=T)
-```
-
-## Figures
-
-You can refer to tables by using Figure \@ref(fig:fig1).
-
-```{r fig1, fig.cap="This is the text caption under the figure"}
-# Note that the label for a figure is always fig:chunkname
-iris %>% ggplot() + aes(x = Sepal.Length) + geom_histogram() + cowplot::theme_minimal_hgrid()
-
-```
+4.	Hypothese: Frauen mit einem höheren Bildungsabschluss nehmen OR als sicherer, günstiger und schneller im Vergleicht zu traditionellen Bewerbungsverfahren wahr. 
+*	Verfahren:  zweifaktorielle MANOVA
+*	mancova(datensatz, deps = c(“ORRPS“, “ORRPK“, “ORRPZ“), factors = c(“gender“, “education“))
+*	H0: Die Wahrnehmung von Sicherheit, Kostenfaktoren und zeitliche Faktoren bezüglich OR sind unabhängig von Geschlecht und Schulabschluss.
+*	H1: Die Wahrnehmung von Sicherheit, Kostenfaktoren und zeitliche Faktoren bezüglich OR sind abhängig von Geschlecht und Schulabschluss.
 
 
+5.	Hypothese: Junge Frauen nehmen OR als praktisch und effizient und einfach (für jeden) zugänglich wahr. 
+*	Verfahren: einfaktorielle MANCOVA
+*	mancova(datensatz, deps=c(“ORRPPE“, “ORRPZG“), factors = c(gender), covs=c(“age“))
+*	H0: Geschlecht und Alter wirken sich nicht auf die Wahrnehmung von Praktikabilität/Effizienz und die Zielgruppenerschließung bezüglich OR aus. 
+*	H1: Geschlecht und Alter wirken sich auf die Wahrnehmung von Praktikabilität/Effizienz und die Zielgruppenerschließung bezüglich OR aus. 
 
 
-# Data
-On this sub-page you can find the data used as a downloadable file (CSV, Excel, or PDF).
+# Zusammenhangshypothesen
+1. Hypothese: Das Alter hängt mit der Wahrnehmung von OR zusammen. 
+* Korrelation
 
-```{r data_1, echo=TRUE, message=TRUE, warning=TRUE, paged.print=TRUE}
-data_df <- iris
+2. Hypothese: Je älter man ist, desto negativer ist die Wahrnehmung von OR. 
+* Lineare Regression
+
+3. Hypothese: Negative Wahrnehmung von OR hängt zusammen mit schlechterer Bewertung von zeitlichen Faktoren. 
+* Korrelation
+
+4. Hypothese: Je höher der KUT, desto praktischer/effizienter wird OR wahrgenommen. 
+* Lineare Regression
+
+5. Hypothese: Es gibt einen Zusammenhang zwischen KUT und allgemeiner Wahrnehmung. 
+* Korrelation
+
+# Faktorenraum
+
+![Faktorenraum](https://raw.githubusercontent.com/PiaNolte/E-RecruitingWS1920/master/Images/FaktorenraumE-Recruiting2.png)
 
 
-
-datatable(data_df, filter = list(position = 'top', clear = TRUE, plain = FALSE), extensions = c('Buttons','FixedColumns'), options = list(
-    dom = 'Bfrtip',
-    buttons = c('copy', 'csv', 'excel', 'pdf'),
-    scrollX = TRUE,
-    fixedColumns = TRUE
-  ))
-
-```   
-
-
-
-```{r r_citations, eval=TRUE, include=TRUE, results="asis"}
-#rmdtemplates::line_cite(pkgs) # This creates a single line citing all packages
-rmdtemplates::list_cite(pkgs) # This creates a "thightlist" of all packages 
-```
-
-# References
