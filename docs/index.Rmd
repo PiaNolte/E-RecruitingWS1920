@@ -57,9 +57,8 @@ rmdtemplates::write_bib(pkgs)
 ```
 
 
-# Abstract {-}
-Online-Recruiting
-Forschungsfrage: Wie wird Online-Recruiting (OR) von unterschiedlichen Altersgruppen wahrgenommen und welche Faktoren beeinflussen diese Wahrnehmung?
+# Fragestellung {-}
+**Wie wird Online-Recruiting (OR) von unterschiedlichen Altersgruppen wahrgenommen und welche Faktoren beeinflussen diese Wahrnehmung?**
 
 # Hintergrund der Forschungsfrage
 
