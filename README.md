@@ -18,7 +18,7 @@ _Fokus auf Wahrnehmung_:
 * OR wird von Arbeitnehmern gut angenommen (48% der Befragten bewerten OR positiv)
 * Aber: Der Prozess ist unpersönlich
 * Faktoren, die die Wahrnehmung beeinflussen: Praktikablität, Effizienz, Sicherheit, Interaktion, Zielgruppenerschließung etc.
-* Nutzerprofil: weiblich, Millennial, Bacherloabschluss
+* Nutzerprofil: weiblich, Millennial, Bachelorabschluss
 
 
 # Unterschiedshypothesen:
