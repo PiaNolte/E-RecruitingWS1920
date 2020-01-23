@@ -1,7 +1,7 @@
 ---
 title: "Online-Recruiting (OR)"
 author: "Pia Nolte, Anika Berghahn, Christina Koerfers"
-date: "`r Sys.Date()`"
+date: "24.01.2020"
 bibliography: ["rpackages.bib", "bibliography.bib"]
 biblio-style: "apalike"
 link-citations: true
